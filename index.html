@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;400&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: #FAFAF9;
+            justify-content: center;
+        }
+
+
+        .card {
+            font-family: 'Sora', sans-serif;
+            width: 300px;
+            background-color: #FFFFFF;
+            box-shadow: 0px 0px 20px #E5EAF0;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        hr {
+            margin: 0 -15px;
+            background-color: rgba(108, 114, 127,0.3);
+            height: 0.5px;
+            border: none;
+        }
+
+        .card figure img {
+            object-fit: cover;
+            aspect-ratio: 2/1;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .tag {
+            background-color: #E6D6FC;
+            color: #883AE1;
+            font-weight: bold;
+            width: 58px;
+            padding: 2px 0;
+            text-align: center;
+            border-radius: 25px;
+            font-size: 0.625rem;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .content h1 {
+            font-size: 1.125rem;
+            color: #20293A;
+        }
+
+        .content p {
+            font-size: 0.875rem;
+            font-weight: 200;
+            color: #6C727F;
+            margin-top: 10px;
+            margin-bottom: 12px;
+        }
+
+        .author {
+            font-size: 0.75rem;
+            color: #6C727F;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <figure>
+            <img src="dccl--responsive-mini-blog-card/cactus_img.jpg" alt="" srcset="">
+        </figure>
+        <p class="tag">Design</p>
+        <div class="content">
+            <h1>Embracing Minimalism</h1>
+            <p>From minimalist sculptures to minimalist paintings, this blog will inspire you to appreciate the beauty
+                that lies in simplicity.
+            </p>
+        </div>
+        <hr>
+        <p class="author">Annie Spratt</p>
+    </div>
+</body>
+
+</html>
