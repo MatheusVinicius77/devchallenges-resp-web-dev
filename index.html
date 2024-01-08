@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none
+        }
+
+        :root {
+            --main-star-bg: #F5C044;
+            --title-color: #18181B;
+            --parag-color: #52525A;
+            --bg-color: #FFFFFF;
+            --body-bg: #D4D4D8;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        main {
+            padding: 28px;
+            padding-bottom: 40vh;
+            background-color: #FAFAF9;
+            display: grid;
+            grid-template-areas:
+                'main-content google-aside'
+                'main-content meta-aside';
+
+            grid-template-columns: 3fr 5% 1fr 1fr auto;
+            height: fit-content;
+            gap: 30px;
+        }
+
+        #first-star {
+            background-color: var(--main-star-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            width: 40px;
+            color: rgb(250, 250, 250);
+            color: linear-gradient(180deg, rgba(250, 250, 250, 1) 38%, rgba(245, 192, 68, ) 93%);
+            border-radius: 100%;
+
+        }
+
+        #first-star p {
+            background: linear-gradient(180deg, #FFFFFF 40%, rgb(245, 192, 68) 90%);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        #meta-aside,
+        #google-aside {
+            background-color: var(--bg-color);
+            border-radius: 12px;
+            padding: 25px;
+            width: 100%;
+        }
+
+        #meta-aside {
+            grid-area: meta-aside;
+            grid-column: 2/5;
+        }
+
+        #google-aside {
+            background-color: var(--bg-color);
+            grid-area: google-aside;
+            grid-column: 3/6;
+        }
+
+
+
+        .content {
+            font-family: 'Sora', sans-serif;
+            line-height: 1.8;
+            grid-area: main-content;
+        }
+
+        .content h1 {
+            margin: 15px 0;
+        }
+
+        .content>p {
+            margin-bottom: 25px;
+            color: var(--parag-color);
+            font-size: 20px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            gap: 8px;
+        }
+
+        li div {
+            display: flex;
+            gap: 10px;
+        }
+
+        li div img {
+            width: 24px;
+            align-self: flex-start;
+        }
+
+        li div p {
+            font-size: 14px;
+            color: var(--parag-color);
+            font-weight: 400;
+
+        }
+
+
+        aside h2 {
+            font-size: 16px;
+            margin: 14px 0;
+        }
+
+        aside p {
+            font-size: 16px;
+            color: var(--parag-color);
+            width: 250px;
+        }
+
+        .company-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-items: center;
+            gap: 15px;
+        }
+
+        .company-info div {
+            width: fit-content;
+            align-self: flex-end;
+        }
+
+        .company-star {
+            width: 20px;
+            align-self: flex-end;
+        }
+
+
+        #google-testimonial,
+        #meta-testimonial {
+            width: min(40%, 110px);
+            margin-right: 10px;
+        }
+
+        @media screen and (max-width:850px) {
+            body {
+                padding: 0 35px;
+            }
+
+            main {
+                display: grid;
+                grid-template-columns: 30vw 90px 30vw 1fr;
+                grid-template-areas:
+                    'main-content'
+                    'google-aside'
+                    'meta-aside';
+                margin-top: 10vh;
+                margin-bottom: 80vh ;
+                background-color: aqua;
+            }
+
+            .content {
+                grid-column: span 4;
+                width: 98%;
+            }
+
+            aside p {
+                width: 100%;
+            }
+
+            #google-testimonial,
+            #meta-testimonial {
+                width: 110px;
+                margin-right: 10px;
+            }
+
+
+            #meta-aside {
+                grid-area: meta-aside;
+                grid-column: 1 / span 2;
+            }
+
+            #google-aside {
+                background-color: var(--bg-color);
+                grid-area: google-aside;
+                grid-column: span 2 / 4;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <div class="content">
+            <div id="first-star">
+                <p>⭐️</p>
+
+            </div>
+            <h1>Reviewers</h1>
+            <p>Reviewers is where people can access guidelines, checklists, and other tools to assist them in reviewing
+                papers or manuscripts. It provides a structured approach to ensure that the review process is thorough,
+                efficient, and consistent.
+            </p>
+            <ul>
+                <li>
+                    <div>
+                        <img src="dccl--responsive-testimonial-page/Done_ring_round_fill.svg" alt="">
+                        <p class="p-list">Checklist to Review an Academic Paper</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="dccl--responsive-testimonial-page/Done_ring_round_fill.svg" alt="">
+                        <p class="p-list">Peer Review Checklist</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="dccl--responsive-testimonial-page/Done_ring_round_fill.svg" alt="">
+                        <p class="p-list">Checklist for Editors, Reviewers, and Authors of SPIE Journals</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <aside id="meta-aside">
+            <div class="company-info">
+                <img id="meta-testimonial" src="dccl--responsive-testimonial-page/meta-testimonial.png" alt="">
+                <div>
+                    <img class="company-star" src="dccl--responsive-testimonial-page/Star_fill.svg" alt="">
+                    <img class="company-star" src="dccl--responsive-testimonial-page/Star_fill.svg" alt="">
+                    <img class="company-star" src="dccl--responsive-testimonial-page/Star_fill.svg" alt="">
+                    <img class="company-star" src="dccl--responsive-testimonial-page/Star_fill.svg" alt="">
+                    <img class="company-star" src="dccl--responsive-testimonial-page/Star_fill.svg" alt="">
+                </div>
+
+            </div>
+            <h2>Samantha Lee</h2>
+            <p>I highly recommend the Writecream Business Description</p>
+        </aside>
+
+        <aside id="google-aside">
+            <div class="company-info">
+                <img id="google-testimonial" src="dccl--responsive-testimonial-page/google-testimonial.png" alt="">
+                <div>
+                    <img class="company-star" src="dccl--responsive-testimonial-page/Star_fill.svg" alt="">
+                    <img class="company-star" src="dccl--responsive-testimonial-page/Star_fill.svg" alt="">
+                    <img class="company-star" src="dccl--responsive-testimonial-page/Star_fill.svg" alt="">
+                    <img class="company-star" src="dccl--responsive-testimonial-page/Star_fill.svg" alt="">
+                    <img class="company-star" src="dccl--responsive-testimonial-page/Star_fill_gray.svg" alt="">
+                </div>
+            </div>
+            <h2>Samantha Lee</h2>
+            <p>The checklist ensures that the review process is thorough</p>
+        </aside>
+
+    </main>
+</body>
+
+</html>
