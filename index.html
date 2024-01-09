@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+
+        :root {
+            --form-bg: rgba(64, 54, 169, 0.5);
+            --placeholder-font1: #CDD5E0;
+            --placeholder-font2: #111729;
+            --input-bg1: #F8FAFC;
+            --input-bg2: #FFFFFF;
+
+        }
+
+        #container {
+            background-image: url(./dccl--responsive-contact-page/bg-image.svg);
+            background-size: cover;
+            min-height: 100vh;
+            row-gap: 6rem;
+            padding: 3rem;
+        }
+
+        h1,
+        h2,
+        p {
+            color: var(--input-bg2);
+            text-align: center;
+            margin: 0 auto;
+            width: 64%;
+
+        }
+
+        h1 {
+            margin-top: 3.5rem;
+            font-size: 4rem;
+            font-size: clamp(2rem, 6vw, 5rem);
+            font-weight: bold;
+
+        }
+
+        p {
+            font-size: 2rem;
+            margin-top: 1.2rem;
+            margin-bottom: 5rem;
+        }
+
+
+
+        form {
+            padding: 25px;
+            background-color: var(--form-bg);
+            background-color: rgba(205, 213, 224, 0.2);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 0.1fr 0.1fr 1fr 0.3fr;
+            gap: 1.8rem;
+            border-radius: 25px;
+            margin: 0 auto;
+            max-width: 70%;
+
+        }
+
+
+        form button {
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            border-radius: 1rem;
+            height: 7vh;
+            color: #4036A9;
+            font-weight: 500;
+            font-size: 1.25rem;
+            transition: background-color 0.10s, color 0.10s;
+        }
+
+        form button:hover {
+            background-color: var(--form-bg);
+            color: var(--input-bg1);
+        }
+
+        label {
+            display: block;
+            color: var(--input-bg1);
+            font-size: 0.875rem;
+        }
+
+        #input-name::placeholder,
+        #input-comp-email::placeholder {
+            opacity: 0.4;
+        }
+
+        input,
+        select {
+            height: 80%;
+        }
+
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            border-radius: 15px;
+            padding: 15px;
+            font-size: 1rem;
+            font-weight: 500;
+            border: none;
+            resize: none;
+            color: var(--placeholder-font2);
+        }
+
+        select {
+            background: url(dccl--responsive-contact-page/Expand_down.svg) no-repeat center white;
+            background-position-x: 95%;
+            /* -moz-appearance: none;
+            /* Firefox */
+            /*  -webkit-appearance: none;
+            /* Safari and Chrome */
+            appearance: none;
+
+        }
+
+
+        #group-message {
+            grid-column: span 2;
+        }
+
+        form div:last-child {
+            grid-row: 4;
+            grid-column: span 2;
+        }
+
+        @media only screen and (max-width:835px) {
+
+            #container {
+                padding: 2rem;
+            }
+
+
+            form {
+                max-width: 100%;
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            p {
+                width: 90%;
+                font-size: 1.6rem;
+
+            }
+
+            #group-message {
+                grid-column: span 1;
+            }
+
+            form div:last-child {
+                grid-row: 6;
+                grid-column: span 1;
+            }
+
+            img{
+                width: 25%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header><img src="./dccl--responsive-contact-page/contact-form-icon.svg" alt="" srcset=""></header>
+
+        <div class="content">
+            <div>
+                <h1>Interested in our business pricing?</h1>
+                <p>Fill out the form to view details and we’ll contact you as soon as possible.</p>
+            </div>
+            <form action="">
+                <div id="name-group">
+                    <label for="input-name">Name</label>
+                    <input placeholder="Ethan Johnson" type="text" name="name" id="input-name">
+                </div>
+                <div>
+                    <label for="input-comp-email">Company Email</label>
+                    <input placeholder="ethan@johnson.com" type="text" name="comp-email" id="input-comp-email">
+                </div>
+
+                <div>
+                    <label for="input-company-size">Company Size</label>
+                    <select name="company-size" id="input-company-size">
+                        <option value="50-100">50-100 employees</option>
+                        <option value="100-150">100-150 employees</option>
+                        <option value="150-200">150-200 employees</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="input-subject">Subject</label>
+                    <select name="company-size" id="input-subject">
+                        <option value="Building Landing Pages">Building Landing Pages</option>
+                        <option value="Building Servers">Building Servers</option>
+                        <option value="Building Designs">Building Designs</option>
+                    </select>
+                </div>
+
+                <div id="group-message">
+                    <label for="text-message">Message</label>
+                    <textarea name="message" id="text-message" cols="30" rows="10"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Contact Sales</button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
